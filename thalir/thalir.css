@@ -1,0 +1,387 @@
+/* 1. Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* 2. Background Image Setup */
+body {
+    background-image: url('https://images.pexels.com/photos/539282/pexels-photo-539282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* 3. Container - Glass Effect */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Header Styles */
+.header-green-bar {
+    background: rgba(46, 204, 113, 0.95);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.header-content {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.company-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+}
+
+.company-header {
+    text-align: left; 
+    max-width: 70%; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================================== */
+/* PNG Logo Styles for Large & Center */
+/* ================================== */
+.logo-container { 
+    margin-bottom: 0px; 
+    text-align: center; 
+    width: 100%; 
+    padding-bottom: 10px; 
+}
+
+.company-logo-img {
+    max-width: 600px; 
+    width: 90%; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+/* ================================== */
+/* 1. Logo Divider (கோடு) Style */
+/* ================================== */
+.header-divider {
+    width: 80%; 
+    height: 2px; 
+    background-color: #27ae60; 
+    margin: 0px auto 15px auto; 
+    border-radius: 1px;
+}
+/* ================================== */
+
+/* ================================== */
+/* 2. Social Media Divider Style */
+/* ================================== */
+.social-divider {
+    width: 80%; 
+    height: 2px; 
+    background-color: #27ae60; 
+    margin: 10px auto 0 auto; 
+    border-radius: 1px;
+}
+/* ================================== */
+
+.address-container {
+    text-align: center; 
+}
+
+.address-container p {
+    font-size: 1.1em;
+    color: #3498db; 
+    font-weight: 600; 
+    margin-bottom: 5px;
+}
+
+.ratings {
+    color: #f39c12;
+    font-size: 1.2em;
+}
+
+/* Social Media */
+.social-media-corner {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    padding-top: 15px; 
+    align-items: center; 
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.social-icon:hover { transform: scale(1.1); }
+.social-icon.facebook { background: linear-gradient(45deg, #3b5998, #2d4373); }
+.social-icon.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743); }
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #333;
+    background: rgba(255, 255, 255, 0.5); 
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.tabs a:hover, .tabs a.active {
+    background-color: #27ae60;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Action Buttons */
+.action-buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.action-btn {
+    text-decoration: none; 
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.action-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.call-now { background: linear-gradient(45deg, #3498db, #2980b9); }
+.whatsapp { background: linear-gradient(45deg, #2ecc71, #27ae60); }
+.contact { background: linear-gradient(45deg, #9b59b6, #8e44ad); }
+.direction { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+
+/* Section Titles */
+.section-title {
+    font-size: 1.8em;
+    color: #1a5e20;
+    margin: 30px 0 20px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #27ae60;
+    border-radius: 2px;
+}
+
+/* ============ PRODUCT GRID STYLES ============ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    padding: 10px;
+    margin-bottom: 40px; 
+}
+
+.product-item {
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.85); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-info h3 { font-size: 1.3em; color: #2c3e50; margin-bottom: 8px; }
+.product-info .price { font-size: 1.4em; color: #27ae60; font-weight: 700; display: block; margin-bottom: 10px; }
+
+.product-actions {
+    margin-top: auto;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 5px; /* மூன்று பட்டன்களுக்கு ஏற்றவாறு இடைவெளி குறைக்கப்பட்டுள்ளது */
+}
+
+.call-now-sm, .whatsapp-sm, .view-details-sm {
+    flex: 1;
+    padding: 10px 5px; /* Padding குறைக்கப்பட்டுள்ளது */
+    text-decoration: none; 
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75em; /* எழுத்து அளவு குறைக்கப்பட்டுள்ளது */
+    text-align: center; 
+}
+
+.call-now-sm { background-color: #3498db; }
+.whatsapp-sm { background-color: #25D366; }
+.view-details-sm { background-color: #f39c12; } /* View Details க்கு புதிய நிறம் */
+
+/* ============ PRODUCT EXTRA DETAILS (BOTTOM SECTION) ============ */
+.product-extra-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-box {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 5px solid #27ae60;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.detail-box h4 {
+    font-size: 1.3em;
+    color: #1a5e20;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-box p, .detail-box li {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+}
+
+.detail-box ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 10px;
+}
+
+.detail-box ul li i {
+    color: #27ae60;
+    margin-right: 8px;
+}
+
+/* Photos & Fact Sheet */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.photo-item {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fact-sheet {
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.fact-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container { width: 95%; padding: 15px; }
+    .company-header-wrapper { flex-direction: column; align-items: center; }
+    .company-header { max-width: 100%; text-align: center; }
+    .company-logo-img { max-width: 90%; margin: 0 auto 15px auto; } 
+    .social-media-corner { flex-direction: row; padding-top: 15px; }
+    .action-buttons-group { flex-direction: column; }
+    .fact-row { flex-direction: column; gap: 5px; }
+    .detail-box ul { grid-template-columns: 1fr; }
+    .product-actions { gap: 5px; flex-wrap: wrap;}
+    .call-now-sm, .whatsapp-sm, .view-details-sm { font-size: 0.7em; padding: 8px 3px; }
+}
+
+/* Tab Content Visibility */
+.content-section { display: none; }
